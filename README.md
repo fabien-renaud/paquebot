@@ -213,6 +213,16 @@ Add the following scripts to your `package.json` file
 }
 ```
 
+If you run into the following error, modify your `dev` script
+
+```json
+{
+    "scripts": {
+        "dev": "nodemon --exec node_modules/.bin/babel-node -r dotenv/config src/index.js"
+    }
+}
+```
+
 Add files to git, commit and push
 
 ```sh
