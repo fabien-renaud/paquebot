@@ -232,6 +232,16 @@ git commit -m "Initial commit"
 git push github master
 ```
 
+### Create a new Discord Application
+
+- Create a new Discord Bot here : https://discord.com/developers/applications
+- Go to `Bot` > `Add Bot` > `Yes, do it!` > `Token` > `Copy`
+- Paste your token into `.env` to fill `DISCORD_TOKEN` value
+- Go to `OAuth2` > `Scopes` > Select `bot` and `applications.commands` > `Copy` the invite link into your navigator > `Invite` the bot to one of your Discord server
+
+In Discord, do the following:
+- Go to `Settings` > `Advanced` > Enable `Developer Mode`
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fabien-renaud/message-app/issues).
