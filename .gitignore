@@ -1,0 +1,10 @@
+# IDE
+.idea
+.vscode
+
+# JavaScript
+node_modules
+coverage
+build
+dist
+.env

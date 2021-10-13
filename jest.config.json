@@ -1,0 +1,7 @@
+{
+    "name": "paquebot",
+    "collectCoverage": true,
+    "passWithNoTests": true,
+    "verbose": true,
+    "testPathIgnorePatterns": ["/dist"]
+}
