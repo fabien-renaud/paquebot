@@ -56,6 +56,7 @@ npm run dev
 ## Commands
 
 - `ping` : Return pong
+- `weather <city>` : Return weather data of given city
 
 ## Create a new Discord Application
 
