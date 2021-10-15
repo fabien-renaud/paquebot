@@ -6,8 +6,9 @@
     "scripts": {
         "build": "babel src -d dist --copy-files",
         "dev": "nodemon --exec npx babel-node -r dotenv/config src/index.js",
-        "prestart": "npm run build",
-        "start": "node dist/index.js",
+        "prestart:build": "npm run build",
+        "start:build": "node dist/index.js",
+        "start": "npx babel-node -r dotenv/config src/index.js",
         "test": "jest",
         "validate:lint": "eslint src",
         "validate:prettier": "prettier --check ./src/**/*.js",
