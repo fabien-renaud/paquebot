@@ -1,1 +1,3 @@
-export * from './discord';
+import client from './discord';
+
+export {client};

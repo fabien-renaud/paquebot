@@ -1,7 +1,8 @@
-import ping from './ping';
-import {SlashCommandBuilder} from '@discordjs/builders';
 import {REST} from '@discordjs/rest';
 import {Routes} from 'discord-api-types/v9';
+import {OPTION_TYPES} from '../constants';
+import ping from './ping';
+import weather from './weather';
 
 const {CLIENT_ID: clientId, GUILD_ID: guildId, DISCORD_TOKEN: token} = process.env;
 
@@ -14,23 +15,23 @@ const commands = [
     },
     {
         name: 'weather',
-        description: 'Replies with weather',
-        handler: ping
+        description: 'Replies weather of the given city',
+        options: [
+            {
+                name: 'city',
+                description: 'Name of the city',
+                type: OPTION_TYPES.STRING,
+                required: true
+            }
+        ],
+        handler: weather
     }
 ];
 
-// Clone commands and format it to Discord API
-const formatToDiscordAPI = (command) => new SlashCommandBuilder().setName(command.name).setDescription(command.description).toJSON();
-const commandsToRegister = commands.map(formatToDiscordAPI);
-
 // Register commands to Discord API
 const rest = new REST({version: '9'}).setToken(token);
-rest.put(Routes.applicationGuildCommands(clientId, guildId), {body: commandsToRegister})
+rest.put(Routes.applicationGuildCommands(clientId, guildId), {body: commands})
     .then(() => console.log('Successfully registered application commands.'))
     .catch(console.error);
 
-// Clone commands and format it to export
-const formatToExport = (concat, command) => ({...concat, [command.name]: command.handler});
-const exportedCommands = commands.reduce(formatToExport, {});
-
-export default exportedCommands;
+export default commands;

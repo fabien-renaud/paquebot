@@ -8,12 +8,5 @@ client.once('ready', () => {
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.isCommand()) return;
 
-    const {commandName} = interaction;
-
-    switch (commandName) {
-        case 'ping':
-            commands.ping(interaction);
-        case 'weather':
-            commands.ping(interaction);
-    }
+    commands.find((command) => command.name === interaction.commandName)?.handler(interaction);
 });
