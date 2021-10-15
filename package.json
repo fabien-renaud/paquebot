@@ -8,7 +8,6 @@
         "dev": "nodemon --exec npx babel-node -r dotenv/config src/index.js",
         "prestart": "npm run build",
         "start": "node dist/index.js",
-        "start:single-file": "npx babel-node -r dotenv/config src/single-file-index.js",
         "test": "jest",
         "validate:lint": "eslint src",
         "validate:prettier": "prettier --check ./src/**/*.js",

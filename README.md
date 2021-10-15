@@ -57,7 +57,7 @@ npm run dev
 
 - `ping` : Return pong
 
-### Create a new Discord Application
+## Create a new Discord Application
 
 - Create a new Discord Bot here : https://discord.com/developers/applications
 - Go to `General Information` > `Application ID` > `Copy`
