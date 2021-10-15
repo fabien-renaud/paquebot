@@ -13,5 +13,7 @@ client.on('interactionCreate', async (interaction) => {
     switch (commandName) {
         case 'ping':
             commands.ping(interaction);
+        case 'weather':
+            commands.ping(interaction);
     }
 });
