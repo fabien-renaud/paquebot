@@ -5,6 +5,17 @@
 
 Discord bot in JavaScript
 
+## Table of content
+
+- [Prerequisite](https://github.com/fabien-renaud/paquebot#prerequisite)
+- [Installation](https://github.com/fabien-renaud/paquebot#installation)
+- [Usage](https://github.com/fabien-renaud/paquebot#usage)
+- [Commands](https://github.com/fabien-renaud/paquebot#commands)
+- [Create a new Discord Application](https://github.com/fabien-renaud/paquebot#create-a-new-discord-application)
+- [Steps to reproduce](https://github.com/fabien-renaud/paquebot#steps-to-reproduce)
+    - [Git](https://github.com/fabien-renaud/paquebot#git)
+    - [JavaScript development tools](https://github.com/fabien-renaud/paquebot#javascript-development-tools)
+
 ## Prerequisite
 
 You need Node.JS `v16+` to run this application
@@ -43,6 +54,22 @@ npm run dev
 ```
 
 ## Commands
+
+- `ping` : Return pong
+
+### Create a new Discord Application
+
+- Create a new Discord Bot here : https://discord.com/developers/applications
+- Go to `General Information` > `Application ID` > `Copy`
+- Paste your identifier into `.env` to fill `CLIENT_ID` value
+- Go to `Bot` > `Add Bot` > `Yes, do it!` > `Token` > `Copy`
+- Paste your token into `.env` to fill `DISCORD_TOKEN` value
+- Go to `OAuth2` > `Scopes` > Select `bot` and `applications.commands` > `Copy` the invite link into your navigator > `Invite` the bot to one of your Discord server
+
+In Discord, do the following:
+- Go to `Settings` > `Advanced` > Enable `Developer Mode`
+- Go to your Discord server > `Right click` on the server name > `Copy ID`
+- Paste your identifier into `.env` to fill `GUILD_ID` value
 
 ## Steps to reproduce
 
@@ -221,20 +248,6 @@ git add *
 git commit -m "Initial commit"
 git push github master
 ```
-
-### Create a new Discord Application
-
-- Create a new Discord Bot here : https://discord.com/developers/applications
-- Go to `General Information` > `Application ID` > `Copy`
-- Paste your identifier into `.env` to fill `CLIENT_ID` value
-- Go to `Bot` > `Add Bot` > `Yes, do it!` > `Token` > `Copy`
-- Paste your token into `.env` to fill `DISCORD_TOKEN` value
-- Go to `OAuth2` > `Scopes` > Select `bot` and `applications.commands` > `Copy` the invite link into your navigator > `Invite` the bot to one of your Discord server
-
-In Discord, do the following:
-- Go to `Settings` > `Advanced` > Enable `Developer Mode`
-- Go to your Discord server > `Right click` on the server name > `Copy ID`
-- Paste your identifier into `.env` to fill `GUILD_ID` value
 
 ## 🤝 Contributing
 

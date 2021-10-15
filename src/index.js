@@ -1,4 +1,5 @@
 import {client} from './core';
+import commands from './commands';
 
 client.once('ready', () => {
     console.log('Ready!');
@@ -9,11 +10,8 @@ client.on('interactionCreate', async (interaction) => {
 
     const {commandName} = interaction;
 
-    if (commandName === 'ping') {
-        await interaction.reply('Pong!');
-    } else if (commandName === 'server') {
-        await interaction.reply('Server info.');
-    } else if (commandName === 'user') {
-        await interaction.reply('User info.');
+    switch (commandName) {
+        case 'ping':
+            commands.ping(interaction);
     }
 });
