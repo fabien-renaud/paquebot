@@ -7,6 +7,7 @@ Discord bot in JavaScript
 
 ## Table of content
 
+-   [Tutorials](https://github.com/fabien-renaud/paquebot#tutorials)
 -   [Prerequisite](https://github.com/fabien-renaud/paquebot#prerequisite)
 -   [Installation](https://github.com/fabien-renaud/paquebot#installation)
     -   [Register your Discord Application](https://github.com/fabien-renaud/paquebot#register-your-discord-application)
